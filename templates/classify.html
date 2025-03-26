@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}光谱分类{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>光谱分类</h2>
+    <form method="post" enctype="multipart/form-data" action="/spectras/classify">
+        <div class="mb-3">
+            <label for="file" class="form-label">选择光谱文件</label>
+            <input class="form-control" type="file" id="file" name="file" required>
+        </div>
+        <button type="submit" class="btn btn-primary">开始分类</button>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}新建光谱{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>新建光谱数据</h2>
+    <form method="post" enctype="multipart/form-data" action="/spectras">
+        <div class="mb-3">
+            <label for="name" class="form-label">光谱名称</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        <div class="mb-3">
+            <label for="file" class="form-label">选择数据文件</label>
+            <input type="file" class="form-control" id="file" name="file" multiple required>
+        </div>
+        <button type="submit" class="btn btn-primary">提交数据</button>
+    </form>
+</div>
+{% endblock %}

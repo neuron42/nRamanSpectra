@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}光谱搜索{% endblock %}
+
+{% block content %}
+<div class="container">
+    <form action="/spectras" method="get">
+        <div class="row vh-100 d-flex justify-content-center align-items-center">
+            <div class="col-md-6">
+                <div class="input-group">
+                    <input type="text" class="form-control" name="name" placeholder="输入光谱名称">
+                    <button class="btn btn-primary" type="submit">搜索</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}
